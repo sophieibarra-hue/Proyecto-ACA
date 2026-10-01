@@ -1,7 +1,7 @@
 public abstract class Vehiculo {
-    private String placa;
-    private String marca;
-    private String modelo;
+    private final String placa;
+    private final String marca;
+    private final String modelo;
     private EstadoVehiculo estado;
 
     public Vehiculo(String placa, String marca, String modelo) {
@@ -23,6 +23,7 @@ public abstract class Vehiculo {
         return calcularTarifaDiaria() * dias;
     }
 
+    @Override
     public String toString() {
         return "[" + getClass().getSimpleName() + "] " + marca + " " + modelo +
                " (Placa: " + placa + ") - Estado: " + estado +
