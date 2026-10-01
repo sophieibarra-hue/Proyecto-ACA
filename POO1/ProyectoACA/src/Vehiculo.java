@@ -4,6 +4,18 @@ public abstract class Vehiculo {
     private String modelo;
     private EstadoVehiculo estado;
 
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
     public Vehiculo(String placa, String marca, String modelo) {
         this.placa = placa;
         this.marca = marca;
@@ -22,7 +34,8 @@ public abstract class Vehiculo {
     public double calcularCostoAlquiler(int dias) {
         return calcularTarifaDiaria() * dias;
     }
-
+ 
+    @Override 
     public String toString() {
         return "[" + getClass().getSimpleName() + "] " + marca + " " + modelo +
                " (Placa: " + placa + ") - Estado: " + estado +
