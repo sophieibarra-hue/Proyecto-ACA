@@ -5,6 +5,30 @@ public class Alquiler {
     private double costoTotal;
     private boolean activo;
 
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
+    }
+
+    public int getDiasAlquiler() {
+        return diasAlquiler;
+    }
+
+    public void setDiasAlquiler(int diasAlquiler) {
+        this.diasAlquiler = diasAlquiler;
+    }
+
+    public void setCostoTotal(double costoTotal) {
+        this.costoTotal = costoTotal;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
     public Alquiler(Cliente cliente, Vehiculo vehiculo, int diasAlquiler) {
         this.cliente = cliente;
         this.vehiculo = vehiculo;
@@ -27,6 +51,7 @@ public class Alquiler {
     public Vehiculo getVehiculo() { return vehiculo; }
     public boolean isActivo() { return activo; }
 
+    @Override 
     public String toString() {
         return "Alquiler [Cliente: " + cliente.getNombre() +
                " | Vehículo: " + vehiculo.getPlaca() +
